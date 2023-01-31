@@ -103,8 +103,6 @@ class RGroupFragmentTool {
       return true
     }
 
-    this.editor.hover(null)
-
     const label =
       ci.map === 'rgroups'
         ? ci.id

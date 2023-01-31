@@ -80,11 +80,9 @@ class RGroupAtomTool {
 
     if (!ci) {
       //  ci.type == 'Canvas'
-      this.editor.hover(null)
       propsDialog(this.editor, null, rnd.page2obj(event))
       return true
     } else if (ci.map === 'atoms') {
-      this.editor.hover(null)
       const struct = this.editor.render.ctab.molecule
       const atom = struct.atoms.get(ci.id)
 

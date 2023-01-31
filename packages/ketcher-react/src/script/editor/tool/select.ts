@@ -68,8 +68,6 @@ class SelectTool {
     const newSelected = { atoms: [] as any[], bonds: [] as any[] }
     let actualSgroupId
 
-    this.editor.hover(null) // TODO review hovering for touch devicess
-
     const selectFragment = this.#lassoHelper.fragment || event.ctrlKey
     const ci = this.editor.findItem(
       event,
@@ -405,7 +403,6 @@ class SelectTool {
         ? fromItemsFuse(struct, dragCtx.mergeItems).mergeWith(dragCtx.action)
         : fromItemsFuse(struct, dragCtx.mergeItems)
 
-      editor.hover(null)
       if (dragCtx.mergeItems) editor.selection(null)
       if (dragCtx.action.operations.length !== 0) editor.update(dragCtx.action)
 

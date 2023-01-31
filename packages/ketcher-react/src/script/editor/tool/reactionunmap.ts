@@ -53,7 +53,6 @@ class ReactionUnmapTool {
       })
       this.editor.update(action)
     }
-    this.editor.hover(null)
   }
 }
 

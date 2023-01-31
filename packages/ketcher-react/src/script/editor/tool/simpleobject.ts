@@ -41,7 +41,6 @@ class SimpleObjectTool {
     const ci = this.editor.findItem(event, ['simpleObjects'])
 
     if (ci && ci.map === 'simpleObjects') {
-      this.editor.hover(null)
       this.editor.selection({ simpleObjects: [ci.id] })
       this.dragCtx.ci = ci
     } else {

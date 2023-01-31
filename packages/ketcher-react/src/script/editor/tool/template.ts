@@ -167,7 +167,6 @@ class TemplateTool {
     }
     // eslint-disable-line max-statements
     const editor = this.editor
-    this.editor.hover(null)
 
     this.dragCtx = {
       xy0: editor.render.page2obj(event),
@@ -476,7 +475,6 @@ class TemplateTool {
       ? fromItemsFuse(restruct, dragCtx.mergeItems).mergeWith(dragCtx.action)
       : fromItemsFuse(restruct, dragCtx.mergeItems)
 
-    this.editor.hover(null)
     const completeAction = dragCtx.action
     if (completeAction && !completeAction.isDummy()) {
       this.editor.update(completeAction)
@@ -506,7 +504,6 @@ function addSaltsAndSolventsOnCanvasWithoutMerge(
   const [action] = fromTemplateOnCanvas(restruct, template, dragCtx.xy0, 0)
   editor.update(action)
   editor.selection(null)
-  editor.hover(null)
   editor.event.message.dispatch({
     info: false
   })

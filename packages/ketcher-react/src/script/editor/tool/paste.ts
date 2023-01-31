@@ -149,8 +149,6 @@ class PasteTool {
       ? fromItemsFuse(restruct, this.mergeItems).mergeWith(this.action)
       : fromItemsFuse(restruct, this.mergeItems)
 
-    editor.hover(null)
-
     if (this.action) {
       const action = this.action
       delete this.action

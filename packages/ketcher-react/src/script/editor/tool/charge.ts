@@ -84,7 +84,6 @@ class ChargeTool {
       ci.map === 'atoms' &&
       Elements.get(molecule.atoms.get(ci.id)?.label as string | number)
     ) {
-      this.editor.hover(null)
       this.editor.update(
         fromAtomsAttrs(
           rnd.ctab,

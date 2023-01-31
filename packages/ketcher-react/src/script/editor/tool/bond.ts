@@ -102,7 +102,6 @@ class BondTool {
       return
     }
     const rnd = this.editor.render
-    this.editor.hover(null)
     this.editor.selection(null)
     this.dragCtx = {
       xy0: rnd.page2obj(event),

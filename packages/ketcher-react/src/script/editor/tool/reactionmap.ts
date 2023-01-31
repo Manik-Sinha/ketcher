@@ -35,7 +35,6 @@ class ReactionMapTool {
     const closestItem = this.editor.findItem(event, ['atoms'])
 
     if (closestItem?.map === 'atoms') {
-      this.editor.hover(null)
       this.dragCtx = {
         item: closestItem,
         xy0: rnd.page2obj(event)
@@ -142,7 +141,6 @@ class ReactionMapTool {
       this.updateLine(null, null)
       delete this.dragCtx
     }
-    this.editor.hover(null)
   }
 }
 

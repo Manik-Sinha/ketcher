@@ -44,7 +44,6 @@ class TextTool {
     this.editor.selection(null)
 
     if (closestItem && closestItem.map === 'texts') {
-      this.editor.hover(null)
       this.editor.selection({ texts: [closestItem.id] })
       this.dragCtx = {
         xy0: render.page2obj(event),
@@ -83,7 +82,6 @@ class TextTool {
   click(event) {
     const render = this.editor.render
     const closestItem = this.editor.findItem(event, ['texts'])
-    this.editor.hover(null)
 
     if (!closestItem) {
       propsDialog(this.editor, null, render.page2obj(event), [])
@@ -94,7 +92,6 @@ class TextTool {
 
   dblclick(event) {
     const closestItem = this.editor.findItem(event, ['texts'])
-    this.editor.hover(null)
 
     if (closestItem.map === 'texts') {
       propsDialog(

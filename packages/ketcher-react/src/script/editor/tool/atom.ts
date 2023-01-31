@@ -70,7 +70,6 @@ class AtomTool {
     const sgroups = struct.sgroups
     const molecule = struct.molecule
     const functionalGroups = molecule.functionalGroups
-    this.editor.hover(null)
     this.editor.selection(null)
     const ci = this.editor.findItem(event, ['atoms', 'functionalGroups'])
     if (

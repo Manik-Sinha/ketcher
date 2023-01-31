@@ -42,7 +42,6 @@ class ReactionArrowTool {
     const ci = this.editor.findItem(event, ['rxnArrows'])
 
     if (ci && ci.map === 'rxnArrows') {
-      this.editor.hover(null)
       this.editor.selection({ rxnArrows: [ci.id] })
       this.dragCtx.ci = ci
     } else {

@@ -101,7 +101,6 @@ class ChainTool {
       return
     }
 
-    this.editor.hover(null)
     this.dragCtx = {
       xy0: rnd.page2obj(event),
       item: ci
@@ -239,7 +238,6 @@ class ChainTool {
     }
 
     editor.selection(null)
-    editor.hover(null)
 
     if (dragCtx.action) {
       editor.update(dragCtx.action)

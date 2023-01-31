@@ -72,7 +72,6 @@ class APointTool {
     }
 
     if (ci && ci.map === 'atoms') {
-      this.editor.hover(null)
       const atom = molecule.atoms.get(ci.id)
 
       if (atom?.label === 'R#' && atom?.rglabel !== null) return

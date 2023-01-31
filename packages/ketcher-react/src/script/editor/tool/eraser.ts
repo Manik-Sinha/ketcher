@@ -310,8 +310,6 @@ class EraserTool {
 
     if (!ci) return // ci.type == 'Canvas'
 
-    this.editor.hover(null)
-
     if (ci.map === 'atoms') {
       this.editor.update(fromOneAtomDeletion(restruct, ci.id))
     } else if (ci.map === 'bonds') {
