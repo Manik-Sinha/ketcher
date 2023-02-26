@@ -274,6 +274,7 @@ class SaveDialog extends Component {
     const { filename, format } = formState.result
     const { structStr, imageSrc, isLoading } = this.state
     const isCleanStruct = this.props.struct.isBlank()
+    window.preview = structStr
     return isLoading ? (
       <div className={classes.loadingCirclesContainer}>
         <LoadingCircles />

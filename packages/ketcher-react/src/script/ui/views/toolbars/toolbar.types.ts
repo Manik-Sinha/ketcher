@@ -45,6 +45,7 @@ type TopToolbarItemVariant =
   | 'copy-image'
   | 'copy-mol'
   | 'copy-ket'
+  | 'copy-smi'
   | 'paste'
   | 'zoom-in'
   | 'zoom-out'

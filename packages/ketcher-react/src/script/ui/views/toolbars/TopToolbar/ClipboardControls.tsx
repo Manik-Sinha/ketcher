@@ -21,6 +21,7 @@ interface ClipboardControlsProps {
   onCopy: () => void
   onCopyMol: () => void
   onCopyKet: () => void
+  onCopySmi: () => void
   onCopyImage: () => void
   onPaste: () => void
   onCut: () => void
@@ -33,6 +34,7 @@ export const ClipboardControls = ({
   onCopy,
   onCopyMol,
   onCopyKet,
+  onCopySmi,
   onCopyImage,
   onPaste,
   onCut,
@@ -55,6 +57,11 @@ export const ClipboardControls = ({
       name: 'copy-ket',
       title: 'Copy as KET',
       handler: onCopyKet
+    },
+    {
+      name: 'copy-smi',
+      title: 'Copy as SMILES',
+      handler: onCopySmi
     },
     {
       name: 'copy-image',

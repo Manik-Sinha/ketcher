@@ -122,6 +122,15 @@ const config = {
     disabled: (editor) => !hasSelection(editor),
     hidden: (options) => isHidden(options, 'copy-ket')
   },
+  'copy-smi': {
+    shortcut: 'Mod+s',
+    title: 'Copy as SMILES',
+    action: () => {
+      copyAs('smi')
+    },
+    disabled: (editor) => !hasSelection(editor),
+    hidden: (options) => isHidden(options, 'copy-smi')
+  },
   paste: {
     shortcut: 'Mod+v',
     title: 'Paste',

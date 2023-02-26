@@ -87,6 +87,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
     onCopy: () => dispatchAction('copy'),
     onCopyMol: () => dispatchAction('copy-mol'),
     onCopyKet: () => dispatchAction('copy-ket'),
+    onCopySmi: () => dispatchAction('copy-smi'),
     onCopyImage: () => dispatchAction('copy-image'),
     onCut: () => dispatchAction('cut'),
     onPaste: () => dispatchAction('paste'),

@@ -89,6 +89,7 @@ const fileSaver = (server) => {
       resolve((data, fn, type) => {
         const blob = new Blob([data], { type }) // eslint-disable-line no-undef
         saveAs(blob, fn)
+        window.save = data
       })
     } else if (server) {
       resolve(

@@ -14,7 +14,12 @@
  * limitations under the License.
  ***************************************************************************/
 
-import { KetSerializer, MolSerializer, SupportedFormat } from 'ketcher-core'
+import {
+  KetSerializer,
+  MolSerializer,
+  SmiSerializer,
+  SupportedFormat
+} from 'ketcher-core'
 
 export default function copyAs(type) {
   const state = global.currentState
@@ -30,6 +35,10 @@ export default function copyAs(type) {
       }
       case 'ket': {
         serializer = new KetSerializer()
+        break
+      }
+      case 'smi': {
+        serializer = new SmiSerializer()
         break
       }
       default: {
@@ -50,6 +59,10 @@ export default function copyAs(type) {
     }
 
     const structData = serializer.serialize(struct)
+
+    if (type === 'smi') {
+      window.smiles = structData
+    }
 
     if (window.clipboardData) {
       window.clipboardData.setData('text', structData)
