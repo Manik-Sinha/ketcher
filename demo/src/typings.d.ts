@@ -4,6 +4,7 @@ type KetcherApiType = {
   selectAll: () => void
   selectAtomsById: (arr: number[]) => void
   exportCtab: () => Promise<string>
+  exportGetSmiles: (isExtended: boolean) => Promise<string>
   getSelectedAtomId: () => string | null
   highlightSelection: (color: string) => {
     lastHighlightID: number

@@ -124,6 +124,7 @@ export const buttonLabelMap = {
 }
 
 // Keys of buttons we initially hide in our demo app
+/*
 export const initiallyHidden = [
   'arom',
   'dearom',
@@ -135,3 +136,5 @@ export const initiallyHidden = [
   'analyse',
   'recognize'
 ]
+*/
+export const initiallyHidden = ['']

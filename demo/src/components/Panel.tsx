@@ -8,12 +8,14 @@ import { ButtonsSelect } from './ButtonsSelect'
 import { FileInputForm } from './FileInputForm'
 import { ControlsCard } from './ControlsCard'
 
+declare var SMILES: undefined
+
 const FlexBox = styled('div')`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 10px;
 `
 
@@ -40,6 +42,14 @@ export const Panel = ({
     })
   }
 
+  const exportSmilesHandler = () => {
+    KetcherFunctions.exportGetSmiles(false).then((str) => {
+      let message = str
+      console.log(message)
+      printToTerminal(message)
+    })
+  }
+
   const showAtomIds = () => {
     const atoms = KetcherFunctions.getSelectedAtomId()
     console.log('Selected atoms:')
@@ -52,6 +62,23 @@ export const Panel = ({
     }
   }
 
+  //*
+  return (
+    <FlexBox>
+      <ControlsCard cardName="Export as SMILES when done">
+        <PanelButton
+          onClick={exportSmilesHandler}
+          variant="contained"
+          size="small"
+          style={{ marginTop: '15px', marginBottom: '15px' }}
+        >
+          Export as SMILES
+        </PanelButton>
+      </ControlsCard>
+    </FlexBox>
+  )
+  //*/
+  /*
   return (
     <FlexBox>
       <ControlsCard cardName="Selection">
@@ -103,7 +130,15 @@ export const Panel = ({
         >
           Export as MDL Molfile V2000
         </PanelButton>
+        <PanelButton
+          onClick={exportSmilesHandler}
+          variant="contained"
+          size="small"
+          style={{ marginTop: '15px', marginBottom: '15px' }}
+        >
+          Export as Daylight SMILES
+        </PanelButton>
       </ControlsCard>
     </FlexBox>
-  )
+  )*/
 }

@@ -17,12 +17,14 @@ const GridWrapper = styled('div')`
   width: 100vw;
   max-height: 100vh;
   max-width: 100vw;
-  overflow: hidden;
+  overflow: scroll;
   display: grid;
-  grid-template-columns: 1fr 270px 320px;
-  grid-template-rows: 1fr;
+  grid-template-columns: fit-content(50%);
+  grid-template-rows: 2fr 1fr;
   gap: 0px 0px;
-  grid-template-areas: 'Ketcher Panel Output';
+  grid-template-areas:
+    'Ketcher Ketcher'
+    'Panel Output';
   & > div {
     border: 1px solid grey;
   }
@@ -30,7 +32,6 @@ const GridWrapper = styled('div')`
 
 const KetcherBox = styled('div')`
   grid-area: Ketcher;
-  height: 100vh;
 `
 
 const OutputBox = styled('div')`
